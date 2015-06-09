@@ -1,10 +1,24 @@
+/**
+ * @project chaos
+ * @package
+ * @file demo.js
+ * Created by <a href="mailto:jincheng.jcs@gmail.com">瑾诚</a> on 2015/6/9.
+ **/
 'use strict';
 
-var greet = function(name) {
-	return 'Hello, ' + name;
-};
+import React from 'react';
+import Temp from './demo.jsx';
 
-var greeter = {};
-greeter.greet = greet;
+let Demo = React.createClass({
+    render: Temp,
+    getInitialState() {
+        return {
+            mapId: 'map'
+        };
+    },
+    getId() {
+        return this.props.id;
+    }
+});
 
-module.exports = greeter;
+export default Demo;

@@ -2,7 +2,7 @@
 // Generated on Tue Jun 09 2015 08:32:50 GMT+0800 (中国标准时间)
 
 module.exports = function(config) {
-  config.set({
+    config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -28,6 +28,19 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'src/**/*.js': ['babel'],
+      'test/**/*.test.js': ['babel']
+    },
+    babelPreprocessor: {
+      options: {
+        sourceMap: 'inline'
+      },
+      filename: function(file) {
+        return file.originalPath(/\.js$/, '.es5.js');
+      },
+      sourceFileName: function(file) {
+        return file.originalPath;
+      }
     },
 
 
@@ -56,11 +69,17 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Firefox', 'Safari', 'IE', 'PhantomJS'],
-
+    //browsers: ['Chrome', 'Firefox', 'Safari', 'IE', 'PhantomJS'],
+      browsers: ['Chrome', 'Firefox', 'IE', 'PhantomJS'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
+    singleRun: false,
+
+    //client: {
+    //    mocha : {
+    //        report: 'spec'
+    //    }
+    //}
   });
 };
