@@ -6,7 +6,7 @@
  **/
 'use strict';
 
-import React from 'react';
+import React from 'react/addons';
 import Temp from './demo.jsx';
 
 let Demo = React.createClass({
