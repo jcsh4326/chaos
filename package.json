@@ -15,10 +15,20 @@
     "leaflet",
     "unit-tested"
   ],
-  "author": "jincheng",
+  "author": "jincheng<jincheng.jcs@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jcsh4326/chaos/issues"
   },
-  "homepage": "https://github.com/jcsh4326/chaos"
+  "homepage": "https://github.com/jcsh4326/chaos",
+  "devDependencies": {
+    "babel": "^5.5.5",
+    "chai": "^3.0.0",
+    "gulp": "^3.9.0",
+    "istanbul": "^0.3.14",
+    "karma": "^0.12.36",
+    "karma-babel-preprocessor": "^5.2.1",
+    "karma-mocha": "^0.1.10",
+    "mocha": "^2.2.5"
+  }
 }
