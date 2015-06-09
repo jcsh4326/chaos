@@ -31,6 +31,7 @@
     "gulp": "^3.9.0",
     "gulp-eslint": "^0.13.2",
     "gulp-mocha": "^2.1.1",
+    "gulp-react": "^3.0.1",
     "istanbul": "^0.3.14",
     "jsdom": "^5.4.3",
     "karma": "^0.12.36",
@@ -41,8 +42,10 @@
     "karma-mocha": "^0.1.10",
     "karma-phantomjs-launcher": "^0.2.0",
     "karma-safari-launcher": "^0.1.1",
+    "localStorage": "^1.0.3",
     "mocha": "^2.2.5",
     "phantomjs": "^1.9.17",
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "uglify-js": "^2.4.23"
   }
 }

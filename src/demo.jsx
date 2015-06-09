@@ -1,10 +1,10 @@
 'use strict';
 
-import React from 'react';
+import React from 'react/addons';
 
 const render = function() {
     return (
-        <a>{this.props.id}</a>
+        <a>{this.props.name}</a>
     );
 };
 

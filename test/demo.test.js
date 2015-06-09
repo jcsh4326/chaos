@@ -1,23 +1,19 @@
 'use strict';
 
 // a fake dom
-require('./domTest')('<html><body></body></html>');
-
-import CompDemo from '../src/demo.js';
-
-import React from 'react/addons';
-var TestUtils = React.addons.TestUtils;
-var	expect = require('chai').expect;
+require('./testHelper')('<html><body></body></html>');
+const CompDemo = require('../src/demo.js');
 
 describe('greeter', function() {
-	describe('getId()', function() {
-		it('should be map', function() {
+	describe('render', function() {
+		it('should be render', function() {
+			const React = this.React;
+			const TestUtils = this.TestUtils;
 			var demo = TestUtils.renderIntoDocument(
-				<CompDemo id='map'/>
+				<CompDemo name='map'/>,
+				this.container
 			);
-			var result = demo.getId(),
-				expected = 'map';
-			expect(result).to.equal(expected);
+			console.info(demo.getId());
 		});
 	});
 	describe('#greet()', function() {

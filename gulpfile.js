@@ -32,7 +32,6 @@ gulp.task('test:mocha', ['lint'], function(){
         }));
 });
 
-
 gulp.task('test:karma', ['lint'], function(done) {
     karma.start({
         configFile: path.join(__dirname, 'karma.conf.js'),

@@ -17,7 +17,7 @@ let Demo = React.createClass({
         };
     },
     getId() {
-        return this.props.id;
+        return this.props.name;
     }
 });
 
