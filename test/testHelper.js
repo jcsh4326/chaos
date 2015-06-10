@@ -6,9 +6,10 @@
 
 import localStorage from 'localStorage';
 import {jsdom} from 'jsdom';
+
 module.exports = function(markup) {
      // init jsdom
-    global.document = jsdom();
+    global.document = jsdom(markup||'');
     global.window = global.document.defaultView;
     global.navigator = global.window.navigator;
     // local storage polyfill

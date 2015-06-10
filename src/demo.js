@@ -11,13 +11,18 @@ import Temp from './demo.jsx';
 
 let Demo = React.createClass({
     render: Temp,
+    getDefaultProps() {
+        return {
+            mapId: 'map'
+        };
+    },
     getInitialState() {
         return {
             mapId: 'map'
         };
     },
     getId() {
-        return this.props.name;
+        return this.props.mapId;
     }
 });
 
